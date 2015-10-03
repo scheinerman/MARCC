@@ -2,8 +2,8 @@ require("matrix_maker.jl")
 
 model      = make_matrix_2
 n          = 1000
-total_reps = 1000
-chunk      = 10
+total_reps = 10000
+chunk      = 50
 reps       = int(total_reps/chunk)
 
 info("Creating " * string(total_reps) *
