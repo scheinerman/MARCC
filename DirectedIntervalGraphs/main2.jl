@@ -1,7 +1,7 @@
 require("matrix_maker.jl")
 
-model      = make_matrix_2
-n          = 1000
+model      = make_matrix_1
+n          = 100
 total_reps = 100000
 chunk      = 100
 reps       = int(total_reps/chunk)
