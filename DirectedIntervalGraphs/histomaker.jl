@@ -12,3 +12,10 @@ function histomaker(filename::String)
     y /= sum(y)
     plot(x,y)
 end
+
+# Add annotations to the plot
+function decorate()
+    xlabel("Out degree")
+    ylabel("Probability")
+    grid()
+end
