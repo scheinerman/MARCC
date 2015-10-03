@@ -2,16 +2,14 @@ require("matrix_maker.jl")
 
 model      = make_matrix_2
 n          = 200
-total_reps = 100000
-chunk      = 100
+total_reps = 1000
+chunk      = 10
 reps       = int(total_reps/chunk)
 
 info("Creating " * string(total_reps) *
 	 " random graphs on "* string(n)* " vertices")
 
-tic();
 h = degree_tally(model, n, reps, chunk)
-toc();
 
 # h /= sum(h)
 # plot(0:n, h)
@@ -21,7 +19,7 @@ toc();
 # grid()
 # savefig("out-deg-distro.pdf")
 
-for val in h
-	println(val)
+for k=0:n
+    println(k,",\t", h[k+1])
 end
 
