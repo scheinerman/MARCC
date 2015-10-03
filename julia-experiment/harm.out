@@ -1,0 +1,7 @@
+Computing harmonic sum to 50000000000
+In serial
+elapsed time: 398.965857508 seconds
+result = 25.212504509910307
+In parallel
+elapsed time: 20.41462736 seconds
+result = 25.212504507286482
