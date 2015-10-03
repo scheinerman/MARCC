@@ -4,7 +4,7 @@
 
 #SBATCH
 #SBATCH --job-name=JuliaExperiment
-#SBATCH --time=10
+#SBATCH --time=30
 #SBATCH --partition=parallel
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=24
