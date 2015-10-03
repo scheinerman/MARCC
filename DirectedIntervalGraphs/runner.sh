@@ -10,4 +10,4 @@
 #SBATCH --ntasks-per-node=24
 
 
-time julia -p 40 main2.jl  > degrees.out
+time julia -p 45 main2.jl  > degrees.out

@@ -1,7 +1,7 @@
 require("matrix_maker.jl")
 
 model      = make_matrix_1
-n          = 100
+n          = 1000
 total_reps = 100000
 chunk      = 100
 reps       = int(total_reps/chunk)
@@ -19,7 +19,7 @@ h = degree_tally(model, n, reps, chunk)
 # grid()
 # savefig("out-deg-distro.pdf")
 
-for k=0:n
+for k=0:n-1
     println(k,",\t", h[k+1])
 end
 
