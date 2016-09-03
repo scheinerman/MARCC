@@ -3,9 +3,9 @@ info("Starting process with $(nprocs()) processors")
 @everywhere include("para-cogen.jl")
 @everywhere include("para-clique.jl")
 
-n = 10000    # number of vertices
-chunk = 100	# work chunk size
-reps  = 100    # number rounds
+n = 100_000    # number of vertices
+chunk = 1000	# work chunk size
+reps  = 1000    # number rounds
 total = chunk*reps
 
 info("Generating $(total) random cographs on $n vertices.")
