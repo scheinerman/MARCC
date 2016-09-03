@@ -3,8 +3,8 @@ info("Starting process with $(nprocs()) processors")
 @everywhere include("para-cogen.jl")
 @everywhere include("para-clique.jl")
 
-n = 1000    # number of vertices
-chunk = 10	# work chunk size
+n = 10000    # number of vertices
+chunk = 100	# work chunk size
 reps  = 100    # number rounds
 total = chunk*reps
 
