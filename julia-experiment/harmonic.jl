@@ -5,7 +5,7 @@ function pharm(n::Int)
         error("n must be a multiple of ", np)
     end
     
-    chunk = int(n/np)
+    chunk = round(Int,n/np)
         
     result = @parallel (+) for k=1:np
         range_harm((k-1)*chunk+1, k*chunk)

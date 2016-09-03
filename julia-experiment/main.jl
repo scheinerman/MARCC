@@ -1,13 +1,14 @@
-require("harmonic.jl")
+# require("harmonic.jl")
 
+@everywhere include("harmonic.jl")
 
 n0 = 10^8
 if length(ARGS) > 0
-    n0 = int(ARGS[1])
+    n0 = parse(Int,ARGS[1])
 end
 
 np = nprocs()-1
-n = int(n0/np)*np
+n = round(Int,n0/np)*np
 
 println("Computing harmonic sum to ", n)
 
